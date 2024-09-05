@@ -16,6 +16,9 @@ export default $config({
       url: true,
       link: [bucket],
       handler: "index.handler",
+      nodejs: {
+        plugins: "./plugins.mjs",
+      },
     });
     return {
       api: hono.url,
